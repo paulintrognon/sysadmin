@@ -2,6 +2,7 @@
 
 Ressources :
 - https://docs.ovh.com/fr/vps/conseils-securisation-vps/
+- https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/
 
 ## ip-tables
 
@@ -46,3 +47,7 @@ Save rules:
 sh /etc/iptables/iptables-rules.sh
 sudo sh -c "iptables-save > /etc/iptables/rules.v4"
 ```
+
+## Certbot auto renew
+
+Add new crontab `0 12 * * * /usr/bin/certbot renew --quiet` using command `crontab -e`
