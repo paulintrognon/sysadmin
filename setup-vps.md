@@ -12,7 +12,7 @@ Ressources :
 
 Règles de bases :
 
-Save in `/etc/iptables/iptables-rules.sh`
+Save in `/etc/iptables/iptables.sh`
 ```sh
 #!/bin/sh
 
@@ -44,7 +44,7 @@ iptables -A INPUT -p tcp --dport [YOUR SSH PORT] -j ACCEPT
 
 Save rules:
 ```sh
-sh /etc/iptables/iptables-rules.sh
+sh /etc/iptables/iptables.sh
 sudo sh -c "iptables-save > /etc/iptables/rules.v4"
 ```
 
