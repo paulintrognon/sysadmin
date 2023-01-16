@@ -2,6 +2,7 @@
 
 Ressources :
 - https://docs.ovh.com/fr/vps/conseils-securisation-vps/
+- https://docs.ovh.com/fr/dedicated/firewall-iptables/
 - https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/
 
 ## ip-tables
@@ -19,9 +20,9 @@ Save in `/etc/iptables/iptables.sh`
 # Flush
 iptables -F
 
-# Global policies
+# Drop all non authorized trafic
 iptables -P INPUT DROP
-iptables -P FORWARD DROP
+iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
 
 # Allow established connections
